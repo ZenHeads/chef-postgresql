@@ -6,6 +6,8 @@
 # backports for initial support
 backports_uri = if node["lsb"]["codename"] == "wheezy"
                   "http://cdn.debian.net/debian"
+                elsif node["lsb"]["codename"] == "jessie"
+                  "http://httpredir.debian.org/debian"
                 else
                   "http://backports.debian.org/debian-backports"
                 end
